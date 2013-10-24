@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LinkAggregator</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>LinkAggregator</title>
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="header-wrap">
+			<div id="header">
+				<h1>WeeklyApps Link Aggregator</h1>
+			</div>
+		</div>
 
-<%= yield %>
+	<%= yield %>
 
-</body>
+	</body>
 </html>
