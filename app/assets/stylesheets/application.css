@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 588px;
 }
 
-#link-form-wrapper {
+.link-form-wrapper {
   padding: 0 6px;
   margin-left: auto;
   margin-right: auto;
