@@ -1,33 +1,24 @@
 <div id="wrapper">
-  <h1>Links</h1>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Url</th>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @links.each do |link| %>
-        <tr>
-          <td><%= link.title %></td>
-          <td><%= link.url %></td>
-          <td><%= link.description %></td>
-          <td><%= link_to 'Show', link %></td>
-          <td><%= link_to 'Edit', edit_link_path(link) %></td>
-          <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
+  <div id="links">
+    <% @links.each do|link| %>
+      <div id="link" class="panel panel-default">
+        <div class="panel-heading">
+          <%= link_to link.title, link %> 
+          <div class="created-at">
+            Posted: <%= link.created_at.strftime("%d %b. %Y") %> at <%= link.created_at.strftime("%I:%M%p") %>
+          </div>
+        </div>
+        <div class="panel-body">
+          <p><strong>URL: </strong><%= link.url %></p>
+          <p><%= link.description %></p>
+        </div>
+        <div class="panel-footer">
+          <div class="btn-group pull-right">
+            <%= link_to 'Edit', edit_link_path(link), :type => "button", :class => "btn btn-default btn-xs" %>
+            <%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }, :type => "button", :class => "btn btn-default btn-xs" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
   <%= link_to 'New Link', new_link_path %>
 </div>

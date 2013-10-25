@@ -1,6 +1,5 @@
 /*
  *= require_self
- *= require_tree .
  *= require twitter/bootstrap
  *= require jquery.ui.all
  */
@@ -84,4 +83,35 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
     list-style: square;
   }
+}
+
+.created-at {
+  display: inline-block;
+  font-size: 10px;
+}
+
+.panel-footer {
+  min-height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #007edf;
+  text-shadow: none;
+
+  transition: color 0.5s ease;
+  transition: text-shadow 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -webkit-transition: text-shadow 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -moz-transition: text-shadow 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -o-transition: text-shadow 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -ms-transition: text-shadow 0.5s ease;
+}
+
+a:hover {
+  color: #0069ba;
+  text-shadow: #0090ff 0px 0px 2px;
 }
